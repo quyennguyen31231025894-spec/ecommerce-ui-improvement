@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bài tập cải tiến giao diện trang chi tiết sản phẩm Biti's bằng HTML5 và CSS3.">
+  <title>Chi tiết sản phẩm – Biti's | Bài tập cải tiến giao diện</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- PHẦN 1: GIỮ PHONG CÁCH THANH ĐIỀU HƯỚNG BITI'S GỐC -->
+  <div class="top-notice"><div class="container top-notice-inner"><span>Hotline: 0966158666 (8h – 21h30)</span><span>MIỄN PHÍ VẬN CHUYỂN CHO ĐƠN HÀNG 1.000.000đ</span><span>Hệ thống cửa hàng &nbsp; | &nbsp; Kiểm tra đơn hàng</span></div></div>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="https://bitis.com.vn/" aria-label="Trang chủ Biti's" target="_blank" rel="noopener noreferrer">
+        <img src="images/bitis-logo.png" alt="Biti's – Nâng niu bàn chân Việt">
+      </a>
+      <nav class="primary-nav" aria-label="Danh mục chính">
+        <a class="sale-nav" href="https://bitis.com.vn/collections/sale" target="_blank" rel="noopener noreferrer">Giảm giá</a>
+        <a href="https://bitis.com.vn/collections/giay-nam" target="_blank" rel="noopener noreferrer">Nam</a>
+        <a href="https://bitis.com.vn/collections/giay-nu" target="_blank" rel="noopener noreferrer">Nữ</a>
+        <a href="https://bitis.com.vn/collections/tre-em" target="_blank" rel="noopener noreferrer">Trẻ em</a>
+        <a href="https://bitis.com.vn/collections/hunter" target="_blank" rel="noopener noreferrer">Hunter</a>
+        <a href="https://bitis.com.vn/" target="_blank" rel="noopener noreferrer">Các nhãn hiệu khác</a>
+        <a href="https://bitis.com.vn/" target="_blank" rel="noopener noreferrer">Về Biti's</a>
+      </nav>
+      <div class="header-icons" aria-label="Biểu tượng tiện ích">
+        <span class="icon-only" title="Yêu thích" aria-label="Yêu thích">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 1 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        </span>
+        <span class="icon-only" title="Tìm kiếm" aria-label="Tìm kiếm">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"/><path d="m16 16 5 5"/></svg>
+        </span>
+        <span class="icon-only shopping-icon" title="Giỏ hàng minh họa" aria-label="Giỏ hàng minh họa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+          <small>1</small>
+        </span>
+        <span class="icon-only account-icon" title="Tài khoản" aria-label="Tài khoản">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4.2 22v-2.1a7.8 7.8 0 0 1 15.6 0V22"/></svg>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- PHẦN 2: HÌNH ẢNH + THÔNG TIN MUA HÀNG GIỮ GẦN NHƯ TRANG GỐC -->
+    <div class="product-layout">
+      <div class="left-column">
+        <section class="product-gallery" aria-label="Hình ảnh sản phẩm">
+          <!-- Bộ chọn ảnh chỉ dùng CSS, không cần JavaScript -->
+          <input class="gallery-choice" type="radio" name="view" id="view-front" checked>
+          <input class="gallery-choice" type="radio" name="view" id="view-angle">
+          <input class="gallery-choice" type="radio" name="view" id="view-material">
+          <input class="gallery-choice" type="radio" name="view" id="view-sole">
+          <div class="thumbnails">
+            <label for="view-front" class="thumbnail t-front"><img src="images/giay-kem-chinh.webp" alt="Ảnh góc chính"></label>
+            <label for="view-angle" class="thumbnail t-angle"><img src="images/giay-kem-goc-khac.webp" alt="Góc chụp khác"></label>
+            <label for="view-material" class="thumbnail t-material"><img src="images/giay-kem-chat-lieu.webp" alt="Chi tiết chất liệu"></label>
+            <label for="view-sole" class="thumbnail t-sole"><img src="images/giay-kem-de.webp" alt="Chi tiết đế giày"></label>
+          </div>
+          <div class="gallery-views">
+            <figure class="gallery-view v-front"><img src="images/giay-kem-chinh.webp" alt="Giày thể thao Biti's bé gái màu kem – góc chính"></figure>
+            <figure class="gallery-view v-angle"><img src="images/giay-kem-goc-khac.webp" alt="Giày thể thao Biti's bé gái màu kem – góc khác"></figure>
+            <figure class="gallery-view v-material"><img src="images/giay-kem-chat-lieu.webp" alt="Phần quai và chất liệu lưới giày"></figure>
+            <figure class="gallery-view v-sole"><img src="images/giay-kem-de.webp" alt="Phần đế và mũi giày"></figure>
+            <span class="photo-label">Bấm ảnh nhỏ để xem</span>
+          </div>
+        </section>
+
+        <!-- PHẦN CẢI TIẾN 1: MÔ TẢ RÕ RÀNG, DẠNG BẢNG/THẺ, KHÔNG BỎ THÔNG TIN QUAN TRỌNG -->
+        <section class="description" aria-labelledby="description-title">
+          <div class="section-eyebrow">Mô tả sản phẩm</div>
+          <div class="description-intro card-soft">
+            <h2 id="description-title">Giày thể thao Biti's bé gái màu kem</h2>
+            <p>Thiết kế nhẹ nhàng với tông kem nhã nhặn, dễ phối cùng trang phục đi học, đi chơi hoặc dạo phố. Chất liệu thoáng khí và phần đế nhẹ giúp bé tự tin vận động hằng ngày.</p>
+          </div>
+          <div class="description-columns">
+            <section class="info-card" aria-labelledby="spec-heading">
+              <h3 id="spec-heading">Thông số kỹ thuật</h3>
+              <table class="spec-table">
+                <tbody>
+                  <tr><th scope="row">Thương hiệu</th><td>Biti's Việt Nam</td></tr>
+                  <tr><th scope="row">Mã sản phẩm</th><td>BBG002100KEM</td></tr>
+                  <tr><th scope="row">Màu sắc</th><td>Kem phối chi tiết nâu</td></tr>
+                  <tr><th scope="row">Kích cỡ</th><td>28, 29, 30, 31, 32, 33, 34</td></tr>
+                  <tr><th scope="row">Chất liệu</th><td>Vải lưới Mesh, da tổng hợp</td></tr>
+                  <tr><th scope="row">Thiết kế</th><td>Giày thể thao quai thun chéo</td></tr>
+                </tbody>
+              </table>
+            </section>
+            <section class="info-card" aria-labelledby="features-heading">
+              <h3 id="features-heading">Đặc điểm nổi bật</h3>
+              <ul class="feature-list">
+                <li><span class="feature-symbol">✓</span><span><strong>Quai chéo co giãn:</strong> Dễ mang và tháo, vẫn ôm chân chắc chắn.</span></li>
+                <li><span class="feature-symbol">✓</span><span><strong>Vải Mesh thoáng khí:</strong> Hỗ trợ thoát hơi, hạn chế bí chân khi vận động.</span></li>
+                <li><span class="feature-symbol">✓</span><span><strong>Đế nhẹ, đàn hồi:</strong> Tạo cảm giác linh hoạt, thoải mái khi di chuyển.</span></li>
+                <li><span class="feature-symbol">✓</span><span><strong>Chống trơn trượt:</strong> Rãnh đế tăng độ bám trên nhiều bề mặt.</span></li>
+                <li><span class="feature-symbol">✓</span><span><strong>Màu kem dễ phối:</strong> Phù hợp nhiều trang phục hằng ngày.</span></li>
+              </ul>
+            </section>
+          </div>
+          <div class="description-accordions">
+            <details class="accordion" open>
+              <summary><span>Hướng dẫn bảo quản và vệ sinh</span><span class="chevron">+</span></summary>
+              <div class="accordion-body"><p><strong>Vệ sinh:</strong> Lau phần da bằng khăn ẩm; phần vải lưới có thể dùng bàn chải lông mềm với xà phòng loãng.</p><p><strong>Làm khô:</strong> Đặt giày nơi khô ráo, thoáng gió; tránh phơi dưới nắng gắt.</p><p><strong>Lưu ý:</strong> Không giặt bằng máy để bảo vệ cấu trúc đế và đường chỉ.</p></div>
+            </details>
+            <details class="accordion">
+              <summary><span>Chính sách bán hàng và cam kết</span><span class="chevron">+</span></summary>
+              <div class="accordion-body"><p><strong>Hàng chính hãng:</strong> Sản phẩm thuộc thương hiệu Biti's.</p><p><strong>Đổi trả:</strong> Thông tin khảo sát đề cập hỗ trợ đổi size trong vòng 7 ngày khi còn đủ tem mác và điều kiện áp dụng.</p><p><strong>Giao hàng:</strong> Có hỗ trợ giao hàng và các hình thức thanh toán theo chính sách của Biti's.</p><p class="muted">Chính sách trên chỉ dùng để minh họa nội dung trang; khi mua thật, cần xem chính sách hiện hành trên website chính thức.</p></div>
+            </details>
+          </div>
+        </section>
+      </div>
+
+      <aside class="purchase-panel" aria-label="Thông tin mua sản phẩm">
+        <nav class="breadcrumbs" aria-label="Đường dẫn trang">Trang chủ <span>›</span> Tất cả sản phẩm <span>›</span> Giày búp bê</nav>
+        <div class="product-category">Giày Búp Bê</div>
+        <div class="title-line"><h1>Giày Thể Thao Biti's Bé Gái Màu Kem <span class="sku">BBG002100KEM</span></h1><span class="outline-heart" aria-label="Yêu thích" title="Yêu thích">♡</span></div>
+        <div class="rating" aria-label="5 sao, 10 đánh giá"><span class="stars" aria-hidden="true">★★★★★</span><span class="review-count">(10 đánh giá)</span></div>
+        <div class="price"><strong>339.000 ₫</strong><span>bao gồm VAT</span></div>
+        <div class="compare-price"><del>510.000 ₫</del><span class="discount">-34%</span></div>
+
+        <!-- BƯỚC 4: Gom màu sắc, size, nút mua và thông tin hỗ trợ thành
+             một khối để CSS giữ nó trong tầm nhìn khi người dùng cuộn. -->
+        <div class="purchase-sticky-area">
+        <fieldset class="variant-group"><legend>Màu sắc: <strong>Kem</strong></legend>
+          <div class="colors">
+            <label class="color-option selected" title="Màu kem (đang xem)"><input type="radio" name="color" checked><img src="images/giay-kem-chinh.webp" alt="Giày màu kem"><span>Kem</span></label>
+            <a class="color-option color-link" href="https://bitis.com.vn/products/giay-the-thao-biti-s-be-gai-mau-den-bbg002100den" target="_blank" rel="noopener noreferrer" title="Xem màu đen trên website Biti's"><img src="images/giay-den-tham-khao.webp" alt="Xem biến thể màu đen"><span>Đen</span></a>
+          </div>
+        </fieldset>
+        <fieldset class="variant-group size-choices"><legend>Kích cỡ</legend><div class="sizes">
+          <label><input type="radio" name="size" value="28" checked><span>28</span></label>
+          <label><input type="radio" name="size" value="29" disabled><span>29</span></label>
+          <label><input type="radio" name="size" value="30" disabled><span>30</span></label>
+          <label><input type="radio" name="size" value="31" disabled><span>31</span></label>
+          <label><input type="radio" name="size" value="32" disabled><span>32</span></label>
+          <label><input type="radio" name="size" value="33" disabled><span>33</span></label>
+          <label><input type="radio" name="size" value="34" disabled><span>34</span></label>
+        </div></fieldset>
+        <details class="size-guide"><summary>♧ Hướng dẫn chọn kích cỡ</summary><p>Đặt bàn chân lên giấy, đánh dấu điểm đầu và cuối bàn chân, sau đó đo chiều dài. Đối chiếu với bảng size chính thức trước khi đặt mua.</p></details>
+
+        <!-- PHẦN CẢI TIẾN 2: NÚT MUA NGAY TO, ĐỎ, NỔI BẬT -->
+        <div class="purchase-actions">
+          <button class="button buy-now" type="button" aria-describedby="demo-warning">MUA NGAY <span aria-hidden="true">→</span></button>
+          <button class="button add-to-cart" type="button" aria-describedby="demo-warning">Thêm vào giỏ hàng</button>
+          <div class="stock">Tồn kho còn: 1</div>
+          <button class="button find-stock" type="button" aria-describedby="demo-warning">♧ &nbsp; Xem cửa hàng còn hàng</button>
+          <p id="demo-warning" class="demo-warning">Bản giao diện minh họa bằng HTML/CSS, chưa kết nối chức năng đặt hàng và thanh toán.</p>
+        </div>
+        <div class="purchase-extra">
+          <details class="mini-accordion"><summary>Giao hàng và đổi trả <span>+</span></summary><p>Các thông tin đổi size, thời hạn và phí vận chuyển áp dụng theo chính sách hiện hành của Biti's.</p></details>
+          <details class="mini-accordion"><summary>Đánh giá sản phẩm <span>+</span></summary><p>Ảnh chụp khảo sát cho thấy 10 đánh giá; mục này minh họa vị trí hiển thị nhận xét từ khách hàng.</p></details>
+        </div>
+        </div><!-- Hết khu vực thông tin mua hàng bám theo khi cuộn -->
+      </aside>
+    </div>
+
+    <!-- PHẦN 3: TỐI THIỂU BỐN SẢN PHẨM MẪU THEO ĐỀ BÀI -->
+    <section class="related-products" aria-labelledby="related-title">
+      <div class="related-heading"><div><p class="section-eyebrow">Gợi ý tham khảo</p><h2 id="related-title">Sản phẩm liên quan</h2></div><p>4 sản phẩm mẫu cho bài tập HTML/CSS</p></div>
+      <div class="product-grid">
+        <article class="product-card"><div class="card-image"><img src="images/san-pham-1-trang.webp" alt="Giày EVA trẻ em màu trắng"><span class="badge-new">Gợi ý</span></div><div class="product-card-body"><h3>Giày EVA trẻ em màu trắng</h3><p class="card-price">175.000 ₫</p><button type="button" aria-describedby="demo-warning">Xem sản phẩm</button></div></article>
+        <article class="product-card"><div class="card-image"><img src="images/san-pham-2-cam.webp" alt="Giày EVA trẻ em màu cam"><span class="badge-new">Gợi ý</span></div><div class="product-card-body"><h3>Giày EVA trẻ em màu cam</h3><p class="card-price">175.000 ₫</p><button type="button" aria-describedby="demo-warning">Xem sản phẩm</button></div></article>
+        <article class="product-card"><div class="card-image"><img src="images/san-pham-3-hong.webp" alt="Giày thể thao bé gái màu hồng"><span class="badge-new">Gợi ý</span></div><div class="product-card-body"><h3>Giày thể thao bé gái màu hồng</h3><p class="card-price">420.000 ₫</p><button type="button" aria-describedby="demo-warning">Xem sản phẩm</button></div></article>
+        <article class="product-card"><div class="card-image"><img src="images/san-pham-4-xanh.webp" alt="Dép EVA trẻ em màu xanh"><span class="badge-new">Gợi ý</span></div><div class="product-card-body"><h3>Dép EVA trẻ em màu xanh</h3><p class="card-price">165.000 ₫</p><button type="button" aria-describedby="demo-warning">Xem sản phẩm</button></div></article>
+      </div>
+      <p class="related-note">Tên và giá của 4 sản phẩm liên quan chỉ để minh họa giao diện bài tập, không phải thông tin bán hàng được xác nhận.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><div><strong>Biti's – Bài tập cải tiến giao diện</strong><p>Thiết kế phục vụ học tập, không phải trang bán hàng chính thức.</p></div><div>HTML5 &amp; CSS3 · Không sử dụng JavaScript, backend hoặc cơ sở dữ liệu</div></div></footer>
+</body>
+</html>
