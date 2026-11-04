@@ -1,6 +1,6 @@
 /* ============================================
-   BÀI TẬP UI BITI'S: chỉ HTML5/CSS3, không JS
-   Giữ bố cục gốc, cải tiến phần mô tả & nút mua
+   BÃ€I Táº¬P UI BITI'S: chá»‰ HTML5/CSS3, khÃ´ng JS
+   Giá»¯ bá»‘ cá»¥c gá»‘c, cáº£i tiáº¿n pháº§n mÃ´ táº£ & nÃºt mua
    ============================================ */
 :root {
   --brand-red:#e32220;
@@ -57,9 +57,9 @@ a:focus-visible,button:focus-visible,input:focus-visible+span,summary:focus-visi
   margin:auto;
 }
 
-/* 1. THANH ĐIỀU HƯỚNG
-   Các dòng dưới đây định dạng logo, menu và biểu tượng ở đầu trang.
-   display: flex xếp các thành phần cạnh nhau; gap tạo khoảng cách giữa chúng.
+/* 1. THANH ÄIá»€U HÆ¯á»šNG
+   CÃ¡c dÃ²ng dÆ°á»›i Ä‘Ã¢y Ä‘á»‹nh dáº¡ng logo, menu vÃ  biá»ƒu tÆ°á»£ng á»Ÿ Ä‘áº§u trang.
+   display: flex xáº¿p cÃ¡c thÃ nh pháº§n cáº¡nh nhau; gap táº¡o khoáº£ng cÃ¡ch giá»¯a chÃºng.
 */
 .top-notice {
   background:#050505;
@@ -156,10 +156,10 @@ a:focus-visible,button:focus-visible,input:focus-visible+span,summary:focus-visi
   line-height:15px;
 }
 
-/* 2. BỐ CỤC TRANG CHI TIẾT SẢN PHẨM
-   display: grid chia phần giữa thành hai cột: trái là ảnh/mô tả,
-   phải là giá, màu, kích cỡ và nút mua.
-   grid-template-columns quyết định độ rộng của hai cột.
+/* 2. Bá» Cá»¤C TRANG CHI TIáº¾T Sáº¢N PHáº¨M
+   display: grid chia pháº§n giá»¯a thÃ nh hai cá»™t: trÃ¡i lÃ  áº£nh/mÃ´ táº£,
+   pháº£i lÃ  giÃ¡, mÃ u, kÃ­ch cá»¡ vÃ  nÃºt mua.
+   grid-template-columns quyáº¿t Ä‘á»‹nh Ä‘á»™ rá»™ng cá»§a hai cá»™t.
 */
 .product-layout {
   display:grid;
@@ -251,9 +251,46 @@ a:focus-visible,button:focus-visible,input:focus-visible+span,summary:focus-visi
   font-size:11px;
 }
 
-/* 3. THÔNG TIN MUA HÀNG
-   Các nhóm sau điều chỉnh tên giày, giá, đánh giá sao, màu và kích cỡ.
-   .buy-now là nút MUA NGAY đỏ, cao hơn và dễ thấy hơn nút bên dưới.
+/* BUá»”I 2 â€“ BÆ¯á»šC 7: HIá»†U á»¨NG HOVER VÃ€ FOCUS CHO áº¢NH THU NHá»Ž */
+.thumbnail {
+  transition:border-color .2s ease;   /* viá»n Ä‘á»•i mÃ u mÆ°á»£t trong 0,2 giÃ¢y */
+}
+
+/* Chá»‰ Ã¡p dá»¥ng trÃªn thiáº¿t bá»‹ cÃ³ chuá»™t, Ä‘iá»‡n thoáº¡i cáº£m á»©ng váº«n dÃ¹ng thao tÃ¡c cháº¡m */
+@media (hover: hover) {
+  .thumbnail:hover {
+    border-color:#bdbdbd;             /* viá»n xÃ¡m khi rÃª chuá»™t lÃªn áº£nh nhá» */
+  }
+
+  /* RÃª chuá»™t lÃªn áº£nh nhá» nÃ o thÃ¬ áº£nh lá»›n tÆ°Æ¡ng á»©ng hiá»‡n Ä‘Ã¨ lÃªn Ä‘á»ƒ xem trÆ°á»›c */
+  .product-gallery:has(.t-front:hover) .v-front,
+  .product-gallery:has(.t-angle:hover) .v-angle,
+  .product-gallery:has(.t-material:hover) .v-material,
+  .product-gallery:has(.t-sole:hover) .v-sole {
+    display:block;
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:#fafafa;
+  }
+}
+
+.photo-label {
+  z-index:2;                          /* nhÃ£n luÃ´n náº±m trÃªn áº£nh xem trÆ°á»›c */
+}
+
+/* Viá»n xanh khi chá»n áº£nh báº±ng bÃ n phÃ­m (Tab vÃ  phÃ­m mÅ©i tÃªn) */
+#view-front:focus-visible~.thumbnails .t-front,
+#view-angle:focus-visible~.thumbnails .t-angle,
+#view-material:focus-visible~.thumbnails .t-material,
+#view-sole:focus-visible~.thumbnails .t-sole {
+  outline:3px solid #206bdf;
+  outline-offset:3px;
+}
+
+/* 3. THÃ”NG TIN MUA HÃ€NG
+   CÃ¡c nhÃ³m sau Ä‘iá»u chá»‰nh tÃªn giÃ y, giÃ¡, Ä‘Ã¡nh giÃ¡ sao, mÃ u vÃ  kÃ­ch cá»¡.
+   .buy-now lÃ  nÃºt MUA NGAY Ä‘á», cao hÆ¡n vÃ  dá»… tháº¥y hÆ¡n nÃºt bÃªn dÆ°á»›i.
 */
 .breadcrumbs {
   font-size:12px;
@@ -582,30 +619,30 @@ h1 {
   margin:0 0 14px;
 }
 
-/* BƯỚC 4 - Tự điều chỉnh theo kiểm tra thực tế:
-   Giống trang gốc, cụm chọn màu/size và nút mua đi theo khi cuộn mô tả.
-   Phần tử cha phải đủ chiều cao để sticky hoạt động trong cột bên phải.
-   Khi cuộn hết khu vực chi tiết, sticky ngừng để không che sản phẩm liên quan.
-   Chỉ áp dụng ở màn hình đủ rộng; màn hình điện thoại xếp dọc bình thường. */
+/* BÆ¯á»šC 4 - Tá»± Ä‘iá»u chá»‰nh theo kiá»ƒm tra thá»±c táº¿:
+   Giá»‘ng trang gá»‘c, cá»¥m chá»n mÃ u/size vÃ  nÃºt mua Ä‘i theo khi cuá»™n mÃ´ táº£.
+   Pháº§n tá»­ cha pháº£i Ä‘á»§ chiá»u cao Ä‘á»ƒ sticky hoáº¡t Ä‘á»™ng trong cá»™t bÃªn pháº£i.
+   Khi cuá»™n háº¿t khu vá»±c chi tiáº¿t, sticky ngá»«ng Ä‘á»ƒ khÃ´ng che sáº£n pháº©m liÃªn quan.
+   Chá»‰ Ã¡p dá»¥ng á»Ÿ mÃ n hÃ¬nh Ä‘á»§ rá»™ng; mÃ n hÃ¬nh Ä‘iá»‡n thoáº¡i xáº¿p dá»c bÃ¬nh thÆ°á»ng. */
 @media (min-width: 851px) {
   .purchase-panel {
-    /* Kéo dài cột phải theo khu vực 2 cột để sticky có chỗ hoạt động. */
+    /* KÃ©o dÃ i cá»™t pháº£i theo khu vá»±c 2 cá»™t Ä‘á»ƒ sticky cÃ³ chá»— hoáº¡t Ä‘á»™ng. */
     align-self: stretch;
   }
   .purchase-sticky-area {
-    /* Khối màu/size/nút mua bám trong tầm nhìn lúc cuộn trang. */
+    /* Khá»‘i mÃ u/size/nÃºt mua bÃ¡m trong táº§m nhÃ¬n lÃºc cuá»™n trang. */
     position: sticky;
-    /* Khi bám, cách mép trên vùng nhìn thấy của website 16 pixel. */
+    /* Khi bÃ¡m, cÃ¡ch mÃ©p trÃªn vÃ¹ng nhÃ¬n tháº¥y cá»§a website 16 pixel. */
     top: 16px;
     z-index: 2;
     background: #fff;
   }
 }
 
-/* 4. CẢI TIẾN PHẦN MÔ TẢ
-   .description-columns chia thông số và đặc điểm thành các nhóm rõ ràng.
-   .spec-table định dạng bảng: ô tiêu đề xám, viền mảnh, chữ dễ đọc.
-   .accordion là các mục hướng dẫn có thể nhấn để mở hoặc thu gọn.
+/* 4. Cáº¢I TIáº¾N PHáº¦N MÃ” Táº¢
+   .description-columns chia thÃ´ng sá»‘ vÃ  Ä‘áº·c Ä‘iá»ƒm thÃ nh cÃ¡c nhÃ³m rÃµ rÃ ng.
+   .spec-table Ä‘á»‹nh dáº¡ng báº£ng: Ã´ tiÃªu Ä‘á» xÃ¡m, viá»n máº£nh, chá»¯ dá»… Ä‘á»c.
+   .accordion lÃ  cÃ¡c má»¥c hÆ°á»›ng dáº«n cÃ³ thá»ƒ nháº¥n Ä‘á»ƒ má»Ÿ hoáº·c thu gá»n.
 */
 .section-eyebrow {
   font-size:12px;
@@ -764,9 +801,9 @@ h1 {
   color:#777;
 }
 
-/* 5. BỐN THẺ SẢN PHẨM MẪU
-   .product-grid chia thành 4 cột trên máy tính.
-   Mỗi thẻ có hình, tên, giá và nút xem sản phẩm.
+/* 5. Bá»N THáºº Sáº¢N PHáº¨M MáºªU
+   .product-grid chia thÃ nh 4 cá»™t trÃªn mÃ¡y tÃ­nh.
+   Má»—i tháº» cÃ³ hÃ¬nh, tÃªn, giÃ¡ vÃ  nÃºt xem sáº£n pháº©m.
 */
 .related-products {
   padding:58px 0 65px;
@@ -799,14 +836,21 @@ h1 {
   gap:19px;
 }
 
+/* BUá»”I 2 â€“ BÆ¯á»šC 4: Äá»ŠNH Dáº NG THáºº Sáº¢N PHáº¨M (selector + Box Model) */
 .product-card {
-  border:1px solid #eee;
-  border-radius:9px;
-  overflow:hidden;
-  min-width:0;
   display:flex;
   flex-direction:column;
+  min-width:0;
+  padding:10px;                 /* khoáº£ng trá»‘ng bÃªn trong, giá»¯a viá»n tháº» vÃ  áº£nh/chá»¯ */
   background:#fff;
+  border:1px solid #e5e5e5;     /* viá»n rÃµ hÆ¡n #eee Ä‘á»ƒ tÃ¡ch tháº» khá»i ná»n tráº¯ng */
+  border-radius:12px;           /* bo gÃ³c tháº» */
+  transition:box-shadow .2s ease, border-color .2s ease;
+}
+
+.product-card:hover {
+  border-color:#cfcfcf;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
 .card-image {
@@ -814,6 +858,7 @@ h1 {
   aspect-ratio:1 / 1;
   overflow:hidden;
   background:#f7f7f7;
+  border-radius:8px;            /* bo gÃ³c áº£nh cho Ä‘á»“ng bá»™ vá»›i tháº» */
 }
 
 .card-image>img {
@@ -840,41 +885,43 @@ h1 {
 }
 
 .product-card-body {
-  padding:15px;
   display:flex;
   flex:1;
   flex-direction:column;
   align-items:flex-start;
+  padding:14px 4px 4px;         /* trÃªn 14px, pháº£i 4px, dÆ°á»›i 4px, trÃ¡i 4px */
 }
 
-.product-card h3 {
-  font-size:14px;
-  line-height:1.5;
-  margin:0 0 10px;
-  min-height:42px;
+.product-card .product-title {
+  margin:0 0 8px;               /* khoáº£ng cÃ¡ch bÃªn ngoÃ i, phÃ­a dÆ°á»›i tÃªn */
+  font-size:15px;
+  line-height:1.4;
+  color:#171717;
 }
 
-.card-price {
-  font-size:17px;
+.product-card .card-price {
+  margin:auto 0 14px;           /* auto phÃ­a trÃªn: Ä‘áº©y giÃ¡ xuá»‘ng Ä‘Ã¡y, giÃ¡ cÃ¡c tháº» tháº³ng hÃ ng */
+  font-size:18px;
   font-weight:700;
   color:var(--brand-red);
-  margin:0 0 14px;
 }
 
-.product-card button {
-  margin-top:auto;
+.product-card .btn-detail {
+  display:block;
   width:100%;
-  height:40px;
-  background:#fff;
+  padding:10px 12px;
   border:1px solid #171717;
   border-radius:6px;
+  background:#171717;
+  color:#fff;
   font-weight:700;
-  cursor:pointer;
+  text-align:center;
+  transition:background-color .2s ease, color .2s ease;
 }
 
-.product-card button:hover {
-  color:white;
-  background:#171717;
+.product-card .btn-detail:hover {
+  background:#fff;
+  color:#171717;
 }
 
 .related-note {
@@ -903,10 +950,10 @@ h1 {
   margin:7px 0 0;
 }
 
-/* 6. GIAO DIỆN CHO CÁC MÀN HÌNH KHÁC NHAU
-   @media có nghĩa là chỉ dùng các kiểu bên trong khi màn hình đúng độ rộng.
-   Màn hình nhỏ: chuyển hai cột thành một cột, 4 thẻ thành 2 thẻ mỗi hàng.
-   Trên điện thoại: ảnh ở trên, thông tin mua hàng ở dưới; không dùng sticky.
+/* 6. GIAO DIá»†N CHO CÃC MÃ€N HÃŒNH KHÃC NHAU
+   @media cÃ³ nghÄ©a lÃ  chá»‰ dÃ¹ng cÃ¡c kiá»ƒu bÃªn trong khi mÃ n hÃ¬nh Ä‘Ãºng Ä‘á»™ rá»™ng.
+   MÃ n hÃ¬nh nhá»: chuyá»ƒn hai cá»™t thÃ nh má»™t cá»™t, 4 tháº» thÃ nh 2 tháº» má»—i hÃ ng.
+   TrÃªn Ä‘iá»‡n thoáº¡i: áº£nh á»Ÿ trÃªn, thÃ´ng tin mua hÃ ng á»Ÿ dÆ°á»›i; khÃ´ng dÃ¹ng sticky.
 */
 @media(max-width:1100px) {
   .container {
@@ -1071,17 +1118,20 @@ h1 {
   .product-grid {
     gap:10px;
   }
+  .product-card {
+    padding:8px;
+  }
   .product-card-body {
-    padding:12px;
+    padding:10px 2px 2px;
   }
-  .product-card h3 {
-    font-size:12px;
-    min-height:52px;
+  .product-card .product-title {
+    font-size:13px;
   }
-  .card-price {
+  .product-card .card-price {
     font-size:15px;
   }
-  .product-card button {
+  .product-card .btn-detail {
+    padding:9px 6px;
     font-size:12px;
   }
   .buy-now {

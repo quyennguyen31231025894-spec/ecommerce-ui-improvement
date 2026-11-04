@@ -95,3 +95,53 @@ Giao diện được mở trên trình duyệt để kiểm tra hình ảnh, n�
 - **`top: 16px`:** Khi bám theo, khối này nằm cách mép trên vùng xem website một khoảng 16 pixel.
 - **`align-self: stretch`:** Giúp cột bên phải kéo dài theo hàng đang chứa nó, tạo khoảng không gian để khối có thể bám theo khi cuộn.
 - **`@media`:** Áp dụng cách bố trí khác nhau cho máy tính và điện thoại; ở điện thoại khối mua hàng không bám theo để tránh che nội dung.
+
+---
+
+# Buổi 2 – HTML5 & CSS3
+
+## 1. Công cụ AI
+
+ChatGPT, Claude.
+
+## 2. Mục đích sử dụng
+
+Phân tích mã nguồn Buổi 1, kiểm tra cấu trúc HTML5, giải thích CSS selector, Box Model, Flexbox, Grid, đề xuất hiệu ứng hover/focus và hỗ trợ tìm nguyên nhân lỗi.
+
+## 3. Prompt đã sử dụng
+
+| Prompt | Công cụ | Nội dung chính |
+|---|---|---|
+| Prompt 1 – Phân tích mã nguồn hiện tại | ChatGPT | Xác định thành phần HTML đã có, ba vấn đề của bộ ảnh sản phẩm, thứ tự cải tiến |
+| Prompt 2 – Kiểm tra cấu trúc HTML5 | Claude | Kiểm tra thẻ ngữ nghĩa, thứ bậc tiêu đề, `img`/`alt`/`a`, thẻ đóng mở |
+| Prompt 3 – Tạo CSS cơ bản | ChatGPT | Liên kết `css/style.css`, định dạng `body`, `img`, cách kiểm tra đường dẫn CSS |
+| Prompt 4 – Selector và Box Model | ChatGPT | Định dạng thẻ sản phẩm, giải thích margin/padding/`box-sizing` |
+| Prompt 5 – Flexbox | ChatGPT | Căn chỉnh header bằng `justify-content`, `align-items`, `gap` |
+| Prompt 6 – CSS Grid | ChatGPT | Bố trí danh sách sản phẩm, `grid-template-columns`, `object-fit` |
+| Prompt 7 – Hover và focus | ChatGPT | Rê chuột đổi ảnh lớn, `transition`, `:focus-visible` |
+| Prompt 8 – Kiểm tra lỗi | ChatGPT | Dòng hướng dẫn "Rê chuột…" hiển thị sai trên thiết bị cảm ứng |
+
+Nội dung đầy đủ của từng prompt và câu trả lời của AI được lưu trong báo cáo bài tập Buổi 2.
+
+## 4. Kết quả AI đề xuất và phần tự điều chỉnh
+
+| Prompt | AI đề xuất | Kiểm tra và quyết định |
+|---|---|---|
+| 2 | Đổi `aside` thành `div`, thêm `role="img"`, ẩn icon trang trí, đổi thứ tự `h1`/`h2` | Áp dụng 3 lỗi chính và sửa `alt`; chưa đổi thứ tự tiêu đề vì phải sửa bố cục CSS |
+| 3 | Thêm `height: auto` cho ảnh | Không áp dụng vì ảnh không khai báo `width`/`height` trong HTML, không bị méo |
+| 4 | CSS thẻ sản phẩm gần giống CSS cũ, giữ `min-height: 42px`, giữ `button` | Không áp dụng; tự sửa viền, padding, bỏ `min-height`, đổi nút thành liên kết `a` |
+| 5 | Thêm `justify-content: space-between` cho `.header-content` | Không áp dụng vì menu có `flex: 1` nên không tạo khác biệt; thử `justify-content` trên menu thay thế |
+| 6 | Máy tính 2 cột, điện thoại 1 cột | Không áp dụng; giữ 4 cột trên máy tính, 2 cột trên điện thoại sau khi so sánh trong DevTools |
+| 7 | Dùng `:has()` và `:not()`, thêm hiệu ứng nâng ảnh, mờ dần | Dùng ý tưởng `:has()` và `:focus-visible`; viết cách ngắn hơn (ảnh xem trước nằm đè), giới hạn bằng `@media (hover: hover)`, bỏ hiệu ứng thừa |
+| 8 | Ẩn chữ bằng `font-size: 0` và hiện chữ mới bằng `::after` | Không áp dụng vì trình đọc màn hình vẫn đọc chữ cũ; sửa trực tiếp nội dung thành "Chọn ảnh nhỏ để xem"; dùng lệnh `matchMedia("(hover: none)")` của AI để kiểm tra |
+
+## 5. Phần hiểu và có thể giải thích
+
+- **`:has()`:** chọn khung ảnh có chứa ảnh nhỏ đang được rê chuột, để hiện ảnh lớn tương ứng.
+- **`position: absolute`, `inset: 0`, `z-index`:** cho ảnh xem trước nằm đè lên ảnh đang chọn.
+- **`@media (hover: hover)`:** chỉ áp dụng hiệu ứng rê chuột trên thiết bị có chuột.
+- **`:focus-visible`:** hiện viền xanh khi người dùng chọn ảnh bằng bàn phím, không hiện khi bấm chuột.
+- **`padding` / `margin` / `border`:** khoảng trống bên trong viền, bên ngoài viền và đường viền của thẻ sản phẩm.
+- **`display: flex`, `justify-content`, `align-items`, `gap`:** sắp xếp và căn chỉnh logo, menu, icon trong header.
+- **`display: grid`, `grid-template-columns`, `gap`:** chia danh sách sản phẩm thành các cột bằng nhau.
+- **`object-fit: cover`, `aspect-ratio`:** giữ ảnh sản phẩm trong khung vuông, không bị méo.
