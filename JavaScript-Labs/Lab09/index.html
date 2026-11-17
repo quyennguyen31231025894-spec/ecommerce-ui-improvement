@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 09 – JavaScript 2: DOM and Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="lab-header">
+            <a class="back" href="../index.html">← Về trang chủ JavaScript Labs</a>
+            <h1>Lab 09<br>JavaScript 2:<br>DOM and Events</h1>
+            <p>Truy xuất và thay đổi các phần tử HTML thông qua DOM, xử lý sự kiện của người dùng, làm việc với form và gỡ lỗi sự kiện.</p>
+        </header>
+
+        <main>
+            <section class="section exercise-list">
+                <h2>Danh sách Exercise</h2>
+
+                <div class="step">
+                    <span class="step-num">9.1</span>
+                    <span class="step-title">Basic DOM Selection</span>
+                </div>
+                <div class="step-desc">
+                    <p>Chọn phần tử bằng getElementById, getElementsByTagName, getElementsByClassName, querySelector; đổi nội dung, thuộc tính và style.</p>
+                    <a class="link-btn" href="lab09-walkthrough01.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/lab09-walkthrough01.html" target="_blank">lab09-walkthrough01.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/js/lab09-walkthrough01.js" target="_blank">js/lab09-walkthrough01.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">9.2</span>
+                    <span class="step-title">DOM Family Relations</span>
+                </div>
+                <div class="step-desc">
+                    <p>Xem firstChild, nextSibling, parentNode trong Console và tô màu các phần tử con là thẻ HTML.</p>
+                    <a class="link-btn" href="lab09-walkthrough02.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/lab09-walkthrough02.html" target="_blank">lab09-walkthrough02.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/js/lab09-walkthrough02.js" target="_blank">js/lab09-walkthrough02.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">9.3</span>
+                    <span class="step-title">Modifying the DOM</span>
+                </div>
+                <div class="step-desc">
+                    <p>Tạo thẻ p mới bằng createElement(), appendChild() và xóa phần tử bằng removeChild().</p>
+                    <a class="link-btn" href="lab09-walkthrough03.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/lab09-walkthrough03.html" target="_blank">lab09-walkthrough03.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/js/lab09-walkthrough03.js" target="_blank">js/lab09-walkthrough03.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">9.4</span>
+                    <span class="step-title">Simple Event Handling</span>
+                </div>
+                <div class="step-desc">
+                    <p>Xử lý click, mouseover, mouseout; nút Hide/Show ẩn hiện đoạn văn có hiệu ứng mờ dần với setTimeout().</p>
+                    <a class="link-btn" href="lab09-walkthrough04.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/lab09-walkthrough04.html" target="_blank">lab09-walkthrough04.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/js/lab09-walkthrough04.js" target="_blank">js/lab09-walkthrough04.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">9.5</span>
+                    <span class="step-title">Responding to Load Events</span>
+                </div>
+                <div class="step-desc">
+                    <p>Dùng sự kiện load để mã chỉ chạy khi trang đã tải xong.</p>
+                    <a class="link-btn" href="lab09-walkthrough05.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/lab09-walkthrough05.html" target="_blank">lab09-walkthrough05.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/js/lab09-walkthrough05.js" target="_blank">js/lab09-walkthrough05.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">9.6</span>
+                    <span class="step-title">Debugging Events</span>
+                </div>
+                <div class="step-desc">
+                    <p>Đặt breakpoint trong Chrome Debugger, theo dõi e và e.target khi rê chuột lên các khung (dùng chung trang với bài 9.5).</p>
+                    <a class="link-btn" href="lab09-walkthrough05.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/lab09-walkthrough05.html" target="_blank">lab09-walkthrough05.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/js/lab09-walkthrough05.js" target="_blank">js/lab09-walkthrough05.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">9.7</span>
+                    <span class="step-title">Working with Forms</span>
+                </div>
+                <div class="step-desc">
+                    <p>Đổi màu nền ô nhập khi focus và blur.</p>
+                    <a class="link-btn" href="lab09-walkthrough07.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/lab09-walkthrough07.html" target="_blank">lab09-walkthrough07.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/js/lab09-walkthrough07.js" target="_blank">js/lab09-walkthrough07.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">9.8</span>
+                    <span class="step-title">Form Validation</span>
+                </div>
+                <div class="step-desc">
+                    <p>Kiểm tra các ô không được bỏ trống trước khi gửi form và hiển thị thông báo lỗi dưới form.</p>
+                    <a class="link-btn" href="lab09-walkthrough08.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/lab09-walkthrough08.html" target="_blank">lab09-walkthrough08.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab09/js/lab09-walkthrough08.js" target="_blank">js/lab09-walkthrough08.js</a></p>
+                </div>
+
+                <p class="note">Tài liệu hướng dẫn gốc: <a href="Lab09.pdf" target="_blank">Lab09.pdf</a></p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            Nguyễn Ngọc Thuý Quyên · 31231025894 · 26C1INF50902702
+        </footer>
+
+    </div>
+
+</body>
+</html>
