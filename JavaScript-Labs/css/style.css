@@ -1,85 +1,451 @@
-/* ===== Thiết lập chung ===== */
+/* =========================================
+   THIẾT LẬP CHUNG
+   ========================================= */
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
-    color: #111;
-    background: #fff;
+    font-family: "Inter", Arial, sans-serif;
+    background: #1D2951;
+    color: #E8EBF5;
     line-height: 1.6;
 }
 
+a {
+    color: #E8EBF5;
+}
+
 .container {
-    width: 90%;
+    width: 88%;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* ===== 3.1 Thông tin cá nhân ===== */
-.hero {
-    background: #111;
-    color: #fff;
-    padding: 70px 0;
+/* =========================================
+   THANH MENU
+   ========================================= */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 26px 0;
 }
 
-.hero-inner {
+.menu {
     display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #C9CFE6;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color: #FFFFFF;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #E8EBF5;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* =========================================
+   3.1 THÔNG TIN CÁ NHÂN
+   ========================================= */
+.hero {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    column-gap: 56px;
     align-items: center;
-    gap: 50px;
+    padding: 60px 0 110px;
 }
 
 .avatar {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
-    border: 4px solid #fff;
     filter: grayscale(100%);
-    transition: filter 0.4s;
-}
-
-.avatar:hover {
-    filter: grayscale(0%);
-}
-
-.hero-label {
-    margin: 0;
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #aaa;
 }
 
 .hero h1 {
-    margin: 8px 0 16px;
-    font-size: 40px;
+    grid-column: 2;
+    margin: 0 0 28px;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.info-table {
-    border-collapse: collapse;
-    margin-bottom: 24px;
+.info-row {
+    grid-column: 2;
+    display: flex;
+    padding: 12px 0;
+    border-top: 1px solid rgba(232, 235, 245, 0.35);
+    font-size: 15px;
 }
 
-.info-table th {
-    text-align: left;
-    font-weight: normal;
-    color: #aaa;
-    padding: 4px 30px 4px 0;
+.info-row:last-child {
+    border-bottom: 1px solid rgba(232, 235, 245, 0.35);
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 22px;
-    border: 2px solid #fff;
-    color: #fff;
+.info-label {
+    width: 170px;
+    flex-shrink: 0;
+    padding-top: 3px;
+    color: #9FA9D1;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.info-row a {
     text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #fff;
-    color: #111;
+.info-row a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   CÁC MỤC 3.2 → 3.5
+   ========================================= */
+.section {
+    padding: 70px 0;
+}
+
+.section h2 {
+    margin: 0 0 40px;
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Kiểu 2 cột: tiêu đề trái – nội dung phải (Giới thiệu, Tự đánh giá) */
+.two-col {
+    display: flex;
+    gap: 80px;
+}
+
+.two-col h2 {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.two-col p {
+    margin: 0 0 14px;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Kiểu danh sách đánh số: 08 ———— TÊN (Bài Lab, Kiến thức) */
+.step {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    margin-left: 140px;
+}
+
+.step-num {
+    width: 40px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.step-title {
+    flex: 1;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(232, 235, 245, 0.45);
+    text-align: right;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.step-desc {
+    margin: 12px 0 40px;
+    padding-left: 50%;
+    font-size: 14px;
+    color: #C9CFE6;
+}
+
+.step-desc p {
+    margin: 0 0 4px;
+}
+
+ul.step-desc li {
+    margin-bottom: 6px;
+}
+
+.link-btn {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 1px solid #E8EBF5;
+}
+
+.link-btn:hover {
+    color: #FFFFFF;
+    border-bottom-width: 2px;
+}
+
+.quote {
+    font-size: 26px !important;
+    line-height: 1.35 !important;
+    text-transform: uppercase;
+    text-align: left !important;
+}
+
+/* =========================================
+   CHÂN TRANG VÀ NÚT LÊN ĐẦU TRANG
+   ========================================= */
+.footer {
+    padding: 26px 0 40px;
+    border-top: 1px solid rgba(232, 235, 245, 0.25);
+    color: #9FA9D1;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #E8EBF5;
+    background: #1D2951;
+    color: #E8EBF5;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+.back-to-top:hover {
+    background: #E8EBF5;
+    color: #1D2951;
+}
+
+/* =========================================
+   HIỆU ỨNG HIỆN DẦN KHI CUỘN TỚI
+   (class "show" được thêm bằng JavaScript)
+   ========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   TRANG DANH SÁCH EXERCISE CỦA TỪNG LAB
+   ========================================= */
+.lab-header {
+    padding: 50px 0 30px;
+}
+
+.lab-header .back {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #9FA9D1;
+}
+
+.lab-header .back:hover {
+    color: #FFFFFF;
+}
+
+.lab-header h1 {
+    margin: 20px 0 10px;
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.lab-header p {
+    max-width: 640px;
+    color: #C9CFE6;
+}
+
+.exercise-list .step {
+    margin-left: 0;
+}
+
+.exercise-list .step-num {
+    width: 70px;
+    font-size: 18px;
+}
+
+.exercise-list .step-desc {
+    padding-left: 40%;
+}
+
+.note {
+    color: #9FA9D1;
+    font-style: italic;
+}
+
+/* =========================================
+   GIAO DIỆN ĐIỆN THOẠI (màn hình dưới 600px)
+   ========================================= */
+@media (max-width: 600px) {
+
+    /* Menu */
+    .navbar {
+        justify-content: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0;
+        background: #16203F;
+        border: 1px solid rgba(232, 235, 245, 0.25);
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu a {
+        display: block;
+        padding: 12px 20px;
+    }
+
+    /* Thông tin cá nhân */
+    .hero {
+        grid-template-columns: 64px 1fr;
+        column-gap: 16px;
+        padding: 30px 0 60px;
+    }
+
+    .avatar {
+        grid-row: 1;
+        width: 64px;
+        height: 64px;
+    }
+
+    .hero h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .info-row {
+        grid-column: 1 / 3;
+        font-size: 13px;
+    }
+
+    .hero h1 + .info-row {
+        margin-top: 22px;
+    }
+
+    .info-label {
+        width: 120px;
+        font-size: 10px;
+    }
+
+    /* Các mục */
+    .section {
+        padding: 40px 0;
+    }
+
+    .section h2 {
+        margin-bottom: 24px;
+        font-size: 24px;
+    }
+
+    .two-col {
+        display: block;
+    }
+
+    .two-col h2 {
+        width: auto;
+    }
+
+    .two-col p {
+        text-align: left;
+    }
+
+    .step {
+        margin-left: 0;
+        gap: 14px;
+    }
+
+    .step-title {
+        font-size: 12px;
+    }
+
+    .step-desc,
+    .exercise-list .step-desc {
+        padding-left: 54px;
+    }
+
+    .exercise-list .step-num {
+        width: 54px;
+        font-size: 14px;
+    }
+
+    .quote {
+        font-size: 18px !important;
+    }
+
+    .lab-header h1 {
+        font-size: 26px;
+    }
+}
+
+/* =========================================
+   LINK MÃ NGUỒN TRONG TRANG LAB
+   ========================================= */
+.code-links {
+    margin-top: 8px !important;
+    font-size: 12px;
+    color: #9FA9D1;
+}
+
+.code-links a {
+    color: #C9CFE6;
+}
+
+.code-links a:hover {
+    color: #FFFFFF;
 }
