@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 10 – JavaScript 3: jQuery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="lab-header">
+            <a class="back" href="../index.html">← Về trang chủ JavaScript Labs</a>
+            <h1>Lab 10<br>JavaScript 3:<br>jQuery</h1>
+            <p>Cài đặt và sử dụng thư viện jQuery để chọn phần tử, xử lý sự kiện, thao tác DOM, tạo hiệu ứng động và gửi GET Requests.</p>
+        </header>
+
+        <main>
+            <section class="section exercise-list">
+                <h2>Danh sách Exercise</h2>
+
+                <div class="step">
+                    <span class="step-num">10.1</span>
+                    <span class="step-title">Set up jQuery</span>
+                </div>
+                <div class="step-desc">
+                    <p>Thêm jQuery từ CDN vào phần head, kèm file dự phòng js/jquery-3.1.1.min.js.</p>
+                    <a class="link-btn" href="lab10-walkthrough01.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough01.html" target="_blank">lab10-walkthrough01.html</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10.2</span>
+                    <span class="step-title">Basic Selectors</span>
+                </div>
+                <div class="step-desc">
+                    <p>Dùng $(), val(), html(), attr(), css() và addClass() (mã nằm trong file lab10-walkthrough02.js mà trang lab10-walkthrough01.html liên kết).</p>
+                    <a class="link-btn" href="lab10-walkthrough01.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough01.html" target="_blank">lab10-walkthrough01.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/js/lab10-walkthrough02.js" target="_blank">js/lab10-walkthrough02.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10.3</span>
+                    <span class="step-title">Advanced Selectors</span>
+                </div>
+                <div class="step-desc">
+                    <p>Dùng bộ chọn :password, :nth-child(4n) và :contains() trên form đăng ký.</p>
+                    <a class="link-btn" href="lab10-walkthrough03.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough03.html" target="_blank">lab10-walkthrough03.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/js/lab10-walkthrough03.js" target="_blank">js/lab10-walkthrough03.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10.4</span>
+                    <span class="step-title">jQuery Listeners</span>
+                </div>
+                <div class="step-desc">
+                    <p>Xử lý click, mousemove, mouseleave bằng on(), off() và nối chuỗi sự kiện.</p>
+                    <a class="link-btn" href="lab10-walkthrough04.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough04.html" target="_blank">lab10-walkthrough04.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/js/lab10-walkthrough04.js" target="_blank">js/lab10-walkthrough04.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10.5</span>
+                    <span class="step-title">Inserting DOM Elements</span>
+                </div>
+                <div class="step-desc">
+                    <p>Tạo hình ảnh mới và chèn bằng after(), before(), append(), prepend(), appendTo(), prependTo(), insertBefore().</p>
+                    <a class="link-btn" href="lab10-walkthrough05.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough05.html" target="_blank">lab10-walkthrough05.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/js/lab10-walkthrough05.js" target="_blank">js/lab10-walkthrough05.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10.6</span>
+                    <span class="step-title">Simple jQuery Animation</span>
+                </div>
+                <div class="step-desc">
+                    <p>Hiệu ứng fadeIn, fadeOut, fadeToggle, slideDown, slideUp, slideToggle.</p>
+                    <a class="link-btn" href="lab10-walkthrough06.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough06.html" target="_blank">lab10-walkthrough06.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/js/lab10-walkthrough06.js" target="_blank">js/lab10-walkthrough06.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10.7</span>
+                    <span class="step-title">More jQuery Animation</span>
+                </div>
+                <div class="step-desc">
+                    <p>Hiện khung xem ảnh lớn di chuyển theo chuột khi rê lên ảnh nhỏ.</p>
+                    <a class="link-btn" href="lab10-walkthrough07.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough07.html" target="_blank">lab10-walkthrough07.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/js/lab10-walkthrough07.js" target="_blank">js/lab10-walkthrough07.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10.8</span>
+                    <span class="step-title">Complex Animations</span>
+                </div>
+                <div class="step-desc">
+                    <p>Tạo hoạt ảnh nhiều giai đoạn bằng cách nối chuỗi animate().</p>
+                    <a class="link-btn" href="lab10-walkthrough08.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough08.html" target="_blank">lab10-walkthrough08.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/js/lab10-walkthrough08.js" target="_blank">js/lab10-walkthrough08.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10.9</span>
+                    <span class="step-title">GET Requests</span>
+                </div>
+                <div class="step-desc">
+                    <p>Lấy danh sách thành phố dạng JSON bằng $.get() và hiển thị bằng $.each().</p>
+                    <a class="link-btn" href="lab10-walkthrough09.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough09.html" target="_blank">lab10-walkthrough09.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/js/lab10-walkthrough09.js" target="_blank">js/lab10-walkthrough09.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10.10</span>
+                    <span class="step-title">jqXHR Handling</span>
+                </div>
+                <div class="step-desc">
+                    <p>Xử lý kết quả bằng done(), fail(), always() và hiển thị biểu tượng đang tải.</p>
+                    <a class="link-btn" href="lab10-walkthrough10.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/lab10-walkthrough10.html" target="_blank">lab10-walkthrough10.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab10/js/lab10-walkthrough10.js" target="_blank">js/lab10-walkthrough10.js</a></p>
+                </div>
+
+                <p class="note">Tài liệu hướng dẫn gốc: <a href="Lab10.pdf" target="_blank">Lab10.pdf</a></p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            Nguyễn Ngọc Thuý Quyên · 31231025894 · 26C1INF50902702
+        </footer>
+
+    </div>
+
+</body>
+</html>
