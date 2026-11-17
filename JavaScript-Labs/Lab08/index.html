@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 08 – JavaScript 1: Language Foundations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="lab-header">
+            <a class="back" href="../index.html">← Về trang chủ JavaScript Labs</a>
+            <h1>Lab 08<br>JavaScript 1:<br>Language Foundations</h1>
+            <p>Làm quen với cú pháp JavaScript, cách gắn mã vào trang HTML, sử dụng Console, các đối tượng có sẵn, mảng, hàm và đối tượng.</p>
+        </header>
+
+        <main>
+            <section class="section exercise-list">
+                <h2>Danh sách Exercise</h2>
+
+                <div class="step">
+                    <span class="step-num">8.1</span>
+                    <span class="step-title">Enabling/Disabling JavaScript</span>
+                </div>
+                <div class="step-desc">
+                    <p>Truy cập trang kiểm tra của tài liệu để xem trạng thái bật/tắt JavaScript; trang này hiện không còn hoạt động.</p>
+                    <p class="note">Không có mã nguồn – bài thực hiện trên trình duyệt.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.2</span>
+                    <span class="step-title">Embedded JavaScript</span>
+                </div>
+                <div class="step-desc">
+                    <p>Nhúng JavaScript trực tiếp trong thẻ script ở phần head, dùng alert() hiển thị hộp thoại “Hello World!” (đoạn mã này sau đó được chuyển thành chú thích ở bài 8.5).</p>
+                    <a class="link-btn" href="lab08-walkthrough02.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough02.html" target="_blank">lab08-walkthrough02.html</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.3</span>
+                    <span class="step-title">External JavaScript</span>
+                </div>
+                <div class="step-desc">
+                    <p>Tách mã ra file hello.js, dùng document.write() ghi nội dung và tăng biến count từ 1 lên 2.</p>
+                    <a class="link-btn" href="lab08-walkthrough02.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough02.html" target="_blank">lab08-walkthrough02.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/js/hello.js" target="_blank">js/hello.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.4</span>
+                    <span class="step-title">Using noscript</span>
+                </div>
+                <div class="step-desc">
+                    <p>Thêm thẻ noscript để hiển thị thông báo khi trình duyệt tắt JavaScript.</p>
+                    <a class="link-btn" href="lab08-walkthrough02.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough02.html" target="_blank">lab08-walkthrough02.html</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.5</span>
+                    <span class="step-title">Using the Browser Console</span>
+                </div>
+                <div class="step-desc">
+                    <p>Chuyển hello.js vào thư mục js, đọc lỗi trong Console, kiểm tra biến và dùng console.log(), console.warn(), console.error().</p>
+                    <a class="link-btn" href="lab08-walkthrough02.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough02.html" target="_blank">lab08-walkthrough02.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/js/hello.js" target="_blank">js/hello.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.6</span>
+                    <span class="step-title">Using Built-in JavaScript Objects</span>
+                </div>
+                <div class="step-desc">
+                    <p>Sử dụng String, Date, Math; kiểm tra kiểu bằng typeof và so sánh == với ===.</p>
+                    <a class="link-btn" href="lab08-walkthrough06.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough06.html" target="_blank">lab08-walkthrough06.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/js/lab08-walkthrough06.js" target="_blank">js/lab08-walkthrough06.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.7</span>
+                    <span class="step-title">Arrays</span>
+                </div>
+                <div class="step-desc">
+                    <p>Thêm phần tử bằng push(), unshift() và tự viết vòng lặp tạo bảng lịch tháng từ 1 đến 30.</p>
+                    <a class="link-btn" href="lab08-walkthrough07.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough07.html" target="_blank">lab08-walkthrough07.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/js/lab08-walkthrough07.js" target="_blank">js/lab08-walkthrough07.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.8</span>
+                    <span class="step-title">JavaScript Functions</span>
+                </div>
+                <div class="step-desc">
+                    <p>Hàm outputBox() có tham số, trả về chuỗi HTML tạo 5 khung div; kiểm tra phạm vi biến trong Console.</p>
+                    <a class="link-btn" href="lab08-walkthrough08.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough08.html" target="_blank">lab08-walkthrough08.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/js/lab08-walkthrough08.js" target="_blank">js/lab08-walkthrough08.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.9</span>
+                    <span class="step-title">Functions as Objects</span>
+                </div>
+                <div class="step-desc">
+                    <p>Tính tổng tiền đơn hàng $31.50; viết hàm lồng, hàm ẩn danh và truyền hàm làm tham số.</p>
+                    <a class="link-btn" href="lab08-walkthrough09.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough09.html" target="_blank">lab08-walkthrough09.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/js/lab08-walkthrough09.js" target="_blank">js/lab08-walkthrough09.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.10</span>
+                    <span class="step-title">Creating JavaScript Objects</span>
+                </div>
+                <div class="step-desc">
+                    <p>Tạo đối tượng đơn hàng bằng new Object(), {}, dấu ngoặc vuông, object literal và hàm khởi tạo có phương thức output().</p>
+                    <a class="link-btn" href="lab08-walkthrough10.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough10.html" target="_blank">lab08-walkthrough10.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/js/lab08-walkthrough10.js" target="_blank">js/lab08-walkthrough10.js</a></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">8.11</span>
+                    <span class="step-title">Arrays of Objects</span>
+                </div>
+                <div class="step-desc">
+                    <p>Duyệt mảng các quốc gia bằng for và for…in, hiển thị thông tin kèm lá cờ.</p>
+                    <a class="link-btn" href="lab08-walkthrough11.html">Xem kết quả →</a>
+                    <p class="code-links">Mã nguồn: <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/lab08-walkthrough11.html" target="_blank">lab08-walkthrough11.html</a> · <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement/blob/main/JavaScript-Labs/Lab08/js/lab08-walkthrough11.js" target="_blank">js/lab08-walkthrough11.js</a></p>
+                </div>
+
+                <p class="note">Tài liệu hướng dẫn gốc: <a href="Lab08.pdf" target="_blank">Lab08.pdf</a></p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            Nguyễn Ngọc Thuý Quyên · 31231025894 · 26C1INF50902702
+        </footer>
+
+    </div>
+
+</body>
+</html>
