@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Labs – Nguyễn Ngọc Thuý Quyên</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== THANH MENU ===== -->
+        <nav class="navbar">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="#gioi-thieu">Giới thiệu</a></li>
+                <li><a href="#bai-lab">Bài Lab</a></li>
+                <li><a href="#kien-thuc">Kiến thức</a></li>
+                <li><a href="#tu-danh-gia">Tự đánh giá</a></li>
+            </ul>
+        </nav>
+
+        <header class="hero">
+            <img src="images/avt.jpg" alt="Ảnh đại diện" class="avatar">
+
+            <h1>Nguyễn Ngọc<br>Thuý Quyên</h1>
+
+            <div class="info-row">
+                <span class="info-label">Mã số sinh viên</span>
+                <span>31231025894</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">Lớp học phần</span>
+                <span>26C1INF50902702</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">GitHub</span>
+                <a href="https://github.com/quyennguyen31231025894-spec/ecommerce-ui-improvement" target="_blank">quyennguyen31231025894-spec ↗</a>
+            </div>
+        </header>
+
+        <main>
+
+            <section id="gioi-thieu" class="section two-col reveal">
+                <h2>Giới thiệu</h2>
+                <div>
+                    <p>
+                        Ba bài Lab JavaScript giúp làm quen với ngôn ngữ lập trình JavaScript,
+                        từ nền tảng như biến, hàm, mảng, đối tượng ở Lab 08, đến việc thay đổi nội dung trang và xử lý
+                        thao tác của người dùng qua DOM ở Lab 09, và cuối cùng là dùng thư viện jQuery để viết code ngắn gọn
+                        hơn, tạo hiệu ứng và lấy dữ liệu từ dịch vụ web ở Lab 10.
+                    </p>
+                    <p>
+                        HTML tạo ra nội dung và CSS trình bày giao diện, còn JavaScript giúp trang web phản hồi lại người dùng:
+                        hiện thông báo khi bấm nút, kiểm tra thông tin trước khi gửi form, tạo hiệu ứng khi rê chuột hay cập nhật
+                        dữ liệu mà không cần tải lại trang. Từ đó giúp việc mua sắm trên các website thương mại điện tử trở nên thu hút và thuận tiện hơn.
+                    </p>
+                </div>
+            </section>
+
+            <section id="bai-lab" class="section reveal">
+                <h2>Bài Lab</h2>
+
+                <div class="step">
+                    <span class="step-num">08</span>
+                    <span class="step-title">JavaScript 1: Language Foundations</span>
+                </div>
+                <div class="step-desc">
+                    <p>11 Exercise · 8.1 – 8.11</p>
+                    <a class="link-btn" href="Lab08/">Xem Lab 08 →</a>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">09</span>
+                    <span class="step-title">JavaScript 2: DOM and Events</span>
+                </div>
+                <div class="step-desc">
+                    <p>8 Exercise · 9.1 – 9.8</p>
+                    <a class="link-btn" href="Lab09/">Xem Lab 09 →</a>
+                </div>
+
+                <div class="step">
+                    <span class="step-num">10</span>
+                    <span class="step-title">JavaScript 3: jQuery</span>
+                </div>
+                <div class="step-desc">
+                    <p>10 Exercise · 10.1 – 10.10</p>
+                    <a class="link-btn" href="Lab10/">Xem Lab 10 →</a>
+                </div>
+            </section>
+
+            <section id="kien-thuc" class="section reveal">
+                <h2>Kiến thức đã học</h2>
+
+                <div class="step">
+                    <span class="step-num">08</span>
+                    <span class="step-title">Language Foundations</span>
+                </div>
+                <ul class="step-desc">
+                    <li>Gắn JavaScript vào trang theo hai cách: viết trực tiếp trong thẻ script và tách ra file .js riêng.</li>
+                    <li>Mở Console để đọc lỗi, xem giá trị của biến và in thông báo bằng console.log().</li>
+                    <li>Dùng các đối tượng có sẵn như String, Date, Math và phân biệt được == với ===.</li>
+                    <li>Dùng mảng và vòng lặp để tự in ra bảng lịch tháng.</li>
+                    <li>Viết hàm có tham số, trả về giá trị và tạo đối tượng đơn hàng có giá, số lượng, tổng tiền.</li>
+                </ul>
+
+                <div class="step">
+                    <span class="step-num">09</span>
+                    <span class="step-title">DOM and Events</span>
+                </div>
+                <ul class="step-desc">
+                    <li>Tìm phần tử trong trang theo id, class, tên thẻ hoặc bộ chọn CSS.</li>
+                    <li>Đổi nội dung, thuộc tính, màu sắc của phần tử; thêm phần tử mới và xóa phần tử có sẵn.</li>
+                    <li>Bắt sự kiện click, rê chuột, rời chuột để ẩn hiện nội dung và đổi hình ảnh.</li>
+                    <li>Kiểm tra form không bị bỏ trống trước khi gửi và báo lỗi ngay trên trang.</li>
+                    <li>Đặt breakpoint trong Debugger của Chrome để xem chương trình đang chạy tới đâu.</li>
+                </ul>
+
+                <div class="step">
+                    <span class="step-num">10</span>
+                    <span class="step-title">jQuery</span>
+                </div>
+                <ul class="step-desc">
+                    <li>Thêm thư viện jQuery vào trang và chọn phần tử nhanh hơn bằng $().</li>
+                    <li>Gắn và gỡ sự kiện bằng on(), off(), nối nhiều sự kiện cho cùng một phần tử.</li>
+                    <li>Chèn phần tử mới vào trước, sau hoặc bên trong một phần tử khác.</li>
+                    <li>Tạo hiệu ứng mờ dần, trượt, animate() và khung xem ảnh lớn khi rê chuột.</li>
+                    <li>Lấy dữ liệu JSON từ dịch vụ web bằng $.get() và xử lý khi thành công hoặc lỗi.</li>
+                </ul>
+            </section>
+
+            <section id="tu-danh-gia" class="section two-col reveal">
+                <h2>Tự đánh giá</h2>
+                <div>
+                    <p class="quote">Nền tảng vững thì mọi thứ phía sau mới dễ dàng.</p>
+                    <p>
+                        Qua ba bài Lab, kiến thức quan trọng nhất là cách dùng JavaScript để thay đổi trang web qua DOM và
+                        xử lý thao tác của người dùng. Lab 08 vừa hữu ích nhất vì biến, hàm, mảng và
+                        đối tượng được dùng lại trong tất cả các bài sau nhưng cũng khó nhất vì đây là lần đầu viết code, nhất là phần tự
+                        viết vòng lặp tạo bảng lịch và phần hàm được dùng như một đối tượng. Từ đó, có thể làm
+                        cho website thương mại điện tử các chức năng như kiểm tra form đăng ký, tính tổng tiền giỏ hàng,
+                        phóng to ảnh sản phẩm khi rê chuột hoặc tải danh sách sản phẩm mà không cần tải lại trang.
+                        Kỹ năng cần cải thiện là tự viết code khi không có hướng dẫn và dùng Debugger để tìm lỗi nhanh hơn.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ===== CHÂN TRANG ===== -->
+        <footer class="footer">
+            Nguyễn Ngọc Thuý Quyên · 31231025894 · 26C1INF50902702
+        </footer>
+
+    </div>
+
+    <!-- Nút lên đầu trang -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
